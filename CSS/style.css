@@ -1,0 +1,385 @@
+:root {
+  --electronBlue: #0984e3;
+  --gradientBlue: linear-gradient(to left, #00c6ff, #0984e3 50%, #00c6ff);
+  --gradientTitle: linear-gradient(to right, #0984e3, #2b32b2);
+  --gradientSubtitle: linear-gradient(to right, #0984e3, #2b32b2);
+  --body-bg: #c7ecee;
+  --gray-code: #2d3436;
+  --citeBlue: #2b32b2;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: var(--body-bg);
+}
+
+/************************************************************
+     INICIO - HEADER
+************************************************************/
+
+header {
+  width: 100vw;
+  height: 75px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 1000;
+  background: var(--gradientBlue);
+  box-shadow: 0 3px 17px rgba(0, 0, 0, 0.3);
+  padding: 7px 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container90 {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.container-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.container-logo {
+  width: 400px;
+  margin-top: 3px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+}
+
+.container-logo img {
+  width: 120px;
+  height: 65px;
+  object-fit: cover;
+}
+
+.container-logo label {
+  color: white;
+  cursor: pointer;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 2em;
+  text-shadow: 0 3px 17px rgba(0, 0, 0, 0.3);
+  margin-left: 13px;
+  position: absolute;
+  top: 23%;
+}
+
+.buscar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.buscar__icon {
+  cursor: pointer;
+  color: #fff;
+  font-size: 20px;
+  margin-right: 9px;
+}
+
+.buscar__txt-input {
+  border: none;
+  outline: none;
+  width: 300px;
+  padding: 9px;
+  border-radius: 30px;
+  opacity: 0.9;
+}
+
+.buscar__txt-input:hover {
+  border: solid 2px var(--electronBlue);
+  box-shadow: 0 2px 7px rgba(0, 0, 0, 0.1);
+  width: 330px;
+  padding: 13px;
+  opacity: 1;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar a {
+  color: var(--body-bg);
+  margin: 0 13px;
+  font-size: 16px;
+}
+
+a.navbar--active,
+.navbar a:hover {
+  transition: 0.2s;
+  color: #fff;
+  font-weight: 600;
+  border-bottom: solid 2px #fff;
+}
+
+/************************************************************
+     FOOTER
+************************************************************/
+
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: var(--gradientBlue);
+  color: #fff;
+  margin-top: 7px;
+  padding: 17px;
+}
+
+footer label {
+  font-family: "Courier New", Courier;
+  font-size: 1em;
+  font-weight: bold;
+}
+
+footer span i {
+  font-size: 30px;
+  margin-bottom: 7px;
+}
+
+/************************************************************
+     INICIO CSS JACS COURSE
+************************************************************/
+
+/*** CONTAINER VACIO (ERROR header fixed) ***/
+.container-vacio {
+  display: flex;
+  margin-bottom: 87px;
+}
+
+.line-hr {
+  margin: 20px 0;
+  opacity: 0.3;
+}
+
+.code-line {
+  font-family: "JetBrains Mono", monospace;
+  color: var(--gray-code);
+  text-transform: lowercase;
+  font-style: italic;
+}
+
+.high-txt {
+  color: var(--electronBlue);
+  font-weight: bold;
+}
+
+.title-section {
+  background: var(--gradientTitle);
+  color: white;
+  font-size: 2.7rem;
+  text-shadow: 0 3px 17px rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3px;
+  margin: 27px 0;
+}
+
+.subtitle {
+  width: 40%;
+  height: auto;
+  background: var(--gradientSubtitle);
+  color: #fff;
+  border-top: 2px dotted #fff;
+  border-bottom: 2px dotted #fff;
+  border-radius: 9px;
+  padding: 3px 13px;
+  margin-bottom: 17px;
+}
+
+.cite {
+  font-family: "Times New Roman", Times, serif;
+  font-style: italic;
+  font-size: 0.9em;
+  color: var(--citeBlue);
+  font-weight: 600;
+  margin: 3px 0 23px 0;
+}
+
+.cite__icon {
+  font-size: 1.23em;
+  margin: 0 9px 0 37px;
+  transform: rotate(90deg);
+}
+
+.cinta {
+  display: inline-block;
+  color: var(--electronBlue);
+  border-radius: 7px;
+  border: dotted 2px var(--electronBlue);
+  padding: 0 0.3em;
+  margin: 9px 0;
+  font-weight: bold;
+}
+
+.img-all {
+  display: block;
+  object-fit: cover;
+  border-radius: 9px;
+  border: solid 2px var(--electronBlue);
+}
+
+.img-little {
+  width: 47%;
+  height: 47%;
+}
+
+.img-especificidad {
+  width: 90%;
+  height: 90%;
+  margin: 17px auto;
+}
+
+.lista-instrucciones-cajas li {
+  margin-bottom: 23px;
+}
+
+.img-box-model {
+  border: none;
+}
+
+.lista-border-style {
+  padding-left: 27px;
+}
+
+.lista-border-style li {
+  margin-bottom: 0;
+}
+
+.lista-2-boxmodel {
+  padding-left: 27px;
+}
+
+.lista-2-boxmodel li {
+  margin: 23px 0;
+}
+
+.lista-position {
+  margin-top: 23px;
+  padding-left: 33px;
+}
+.lista-position li {
+  margin-bottom: 23px;
+}
+
+/********* position container padre *********/
+
+.pos-container {
+  /* outline: solid 2px var(--electronBlue); */
+  box-shadow: 1px 2px 17px 7px rgba(0, 0, 0, 0.3);
+  margin: 30px 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 9px;
+  padding: 30px 17px 17px 17px;
+  border-radius: 17px;
+  position: relative;
+}
+
+/********* position container HTML & CSS code *********/
+
+.pos-container__html-code {
+  /* outline: solid 2px var(--electronBlue); */
+  grid-column: 1;
+}
+.pos-container__html-code::before {
+  content: "HTML";
+  background: var(--electronBlue);
+  color: #fff;
+  outline: dotted 2px #fff;
+  position: absolute;
+  top: 7px;
+  left: 24.7%;
+  padding: 9px;
+  border-radius: 17px;
+  grid-column: 1;
+}
+
+.pos-container__css-code {
+  /* outline: solid 2px var(--electronBlue); */
+  grid-column: 2;
+}
+.pos-container__css-code::before {
+  content: "CSS";
+  background: var(--electronBlue);
+  color: #fff;
+  outline: dotted 2px #fff;
+  position: absolute;
+  top: 7px;
+  right: 57%;
+  padding: 9px;
+  border-radius: 17px;
+  grid-column: 2;
+}
+
+.pos-container__html-code textarea,
+.pos-container__css-code textarea {
+  resize: none;
+  width: 100%;
+  height: 100%;
+  font-size: 1.3em;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  outline: none;
+}
+
+/********* position container padre cajas *********/
+
+.pos-container__cajas {
+  /* outline: solid 2px var(--electronBlue); */
+  background: rgba(0, 0, 0, 0.6);
+  grid-column: 3;
+}
+
+.pos-container__cajas::before {
+  content: "RTDO";
+  background: var(--electronBlue);
+  color: #fff;
+  outline: dotted 2px #fff;
+  position: absolute;
+  top: 7px;
+  right: 27px;
+  padding: 9px;
+  border-radius: 17px;
+  grid-column: 3;
+}
+.pos-caja {
+  width: 100px;
+  height: 100px;
+  font-weight: 700;
+  text-align: center;
+}
+.pos-caja1 {
+  background: yellow;
+}
+.pos-caja2 {
+  background: blue;
+  position: relative;
+  top: 23px;
+  left: 20px;
+}
+.pos-caja3 {
+  background: red;
+  position: relative;
+  top: 10px;
+  left: 33px;
+}
+.pos-caja4 {
+  background: white;
+}

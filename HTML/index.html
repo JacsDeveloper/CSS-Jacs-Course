@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="keywords" content="JMG,JacsMotionGraphics,JacsDeveloper,CSS3" />
+    <meta
+      name="description"
+      content="Este es un curso personal de CSS3 para dar estilo a las páginas web."
+    />
+    <meta name="author" content="Jacs" />
+    <meta name="copyright" content="Jacs Motion Graphics" />
+    <link rel="icon" href="/IMAGES/CSS Icon.ico" />
+    <link rel="stylesheet" href="/CSS/style.css" />
+    <script
+      src="https://kit.fontawesome.com/875c9ff8f2.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>CSS3 Jacs Course</title>
+  </head>
+  <body>
+    
+    <!-- ***********************************************************
+         HEADER
+    ************************************************************ -->
+    <header>
+      <div class="container90 container-header">
+        <div class="container-logo">
+          <a href="/HTML/index.html">
+            <img
+              src="../IMAGES/LOGO JACS MOTION GRAPHICS.png"
+              title="Logo JMG"
+              alt="Logo JMG"
+            />
+            <label> CSS3 Jacs Course </label>
+          </a>
+        </div>
+
+        <div class="buscar">
+          <span class="buscar__icon">
+            <i class="fas fa-search"></i>
+          </span>
+          <input
+            class="buscar__txt-input"
+            type="text"
+            placeholder="Buscar"
+            title="Ingresa una búsqueda"
+            required
+          />
+        </div>
+
+        <nav class="navbar">
+          <a href="#" class="navbar--active">Home</a>
+          <a href="#">Portfolio</a>
+          <a href="#">Team</a>
+          <a href="#">Blog</a>
+          <a href="#">About</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- ***********************************************************
+         CONTENEDOR VACIO PARA EVITAR ERROR DEL header:fixed 
+    ************************************************************ -->
+    <div class="container-vacio"></div>
+
+    <!-- ***********************************************************
+         EMPIEZA CURSO - ESPECIFICIDAD
+    ************************************************************ -->
+    <h2 class="title-section">CSS JACS COURSE</h2>
+
+    <div class="container90">
+      <p>
+        CSS sirve para darle estilo a los elementos incluidos en una página web.
+        (Color, forma, letra, posición, etc). Por ende, se estructura y se
+        insertan elementos con <b>HTML</b> y se manipulan para darle estilo con
+        <b>CSS</b>.
+        <br />
+        <b>LO PRIMERO</b> es que las instrucciones en CSS tienen una "jerarquía" o
+        técnicamente, <b>ESPECIFICIDAD</b>. Esto quiere decir que va a existir
+        una instrucción que prima por encima de otra o que se va ejecutar primero
+        dependiendo de la especificidad. <br />
+        <br />
+        <i>
+          La siguiente imagen muestra la <u>especificidad</u> de la MAS a la MENOS
+          jerarquíca:
+        </i>
+        
+        <figure>                   
+          <img
+          class="img-especificidad img-all"
+          src="/IMAGES/especificidad-css.png"
+          title="Especificidad en CSS"
+          alt="Imagen de la Especificidad en CSS"
+          />
+          <figcaption class="cite">
+            <i class="fas fa-code-branch  cite__icon"></i>Img. Especificidad CSS.
+          </figcaption>
+        </figure>  
+    </div>
+
+    <!-- ***********************************************************
+         CAJAS/CONTENEDORES
+    ************************************************************ -->
+    <h2 class="title-section">CAJAS/CONTENEDORES</h2>
+    <div class="container90 container-cajas">  
+      <p>
+        Las cajas o los elementos contenedores tienen unas propiedades o instrucciones básicas
+        para manejar el tamaño, fondo, margen, padding (margen interno), etc. <br> 
+        Las medidas son en px, %, cm, em <i>(equivale a 16px)</i>, etc.
+        <br>
+
+        <figure>                   
+          <img
+          class="img-all img-box-model"
+          src="/IMAGES/box-model-css.png"
+          title="Modelo de caja/Box model"
+          alt="Imagen del Modelo de caja/Box model"
+          />
+          <figcaption class="cite">
+            <i class="fas fa-code-branch  cite__icon"></i>Img. Box model/Modelo de caja.
+          </figcaption>
+        </figure> 
+
+        <hr class="line-hr" color="00c6ff">
+
+        <!-- Subtitle Instrucciones básicas -->
+        <h3 class="subtitle">Propiedades / Instrucciones Básicas: </h3>
+
+        <ul class="container90 lista-instrucciones-cajas">
+          <!-- 1. Width -->
+          <li><b>width: </b>Ancho del contenedor.</li>
+          <!-- 2. Height -->
+          <li><b>height: </b>Alto del contenedor.</li>
+          <!-- 3. Margin -->
+          <li><b>margin: </b>Márgenes del contenedor. Recorre los 4 lados de un contenedor desde arriba y hacia la derecha (top, right, bottom, left). <br>
+            <span class="cinta">SINTAXIS: </span><br>
+            
+            <figure>                   
+              <img
+              class="img-all img-little"
+              src="/IMAGES/margin-syntax-css.png"
+              title="Sintaxis de Margin"
+              alt="Imagen de la sintaxis de Margin"
+              />
+              <figcaption class="cite">
+                <i class="fas fa-code-branch  cite__icon"></i>Img. Margin syntax/Sintaxis de márgenes.
+              </figcaption>
+            </figure> 
+
+          También se puede asignar un margen a un lado específico, poniendo <span class="code-line">margin<b>-[lado específico]</b></span>. <br>
+          <span class="cinta">Por ejemplo: </span><br>
+          <span class="code-line">margin-top: 30px; </span>(Asigna 30px ÚNICAMENTE arriba (top)).
+          <br>
+          <span class="code-line">margin-left: 3em; </span>(Asigna 3em ÚNICAMENTE a la izquierda (left)).
+          </li> <br>
+          <!-- 4. Padding -->
+          <li><b>padding: </b>Márgenes internas del contenedor. Se refiere al espacio que hay entre el CONTENIDO y el borde de la caja. <br> Se recorre igual que Margin (top, right, bottom, left) y SU SINTAXIS ES LA MISMA.</li>
+          <!-- 5. Background -->
+          <li><b>background: </b>Define el <span class="high-txt">COLOR DE FONDO</span> del contenedor, se pueden poner colores rgba, hex, gradients, transparent, entre otros. También se puede poner <span  class="high-txt">IMÁGENES DE FONDO</span> indicando la URL o ruta de la imagen. Ejemplo: <span class="code-line">background: url("/ruta/carpeta/imagen.png")</span> o  <span class="code-line">background: url("https://link-imagen-de-fondo.com")</span>. </li>
+          <!-- 6. Color -->
+          <li><b>color: </b>Define el <span class="high-txt">COLOR DE TEXTO/ COLOR DEL CONTENIDO</span> que tiene la caja.</li>
+          <!-- 7. Border -->
+          <li><b>border: </b>Define el <span class="high-txt">BORDE DE LA CAJA/CONTENEDOR</span>.
+          <br>
+            <span class="cinta">SINTAXIS: </span><br>
+
+            <figure>
+              <img
+                class="img-all img-little"
+                src="/IMAGES/border-syntax-css.png"
+                title="Sintaxis del Border"
+                alt="Imagen de la sintaxis de Border"
+              />
+              <figcaption class="cite">
+                <i class="fas fa-code-branch  cite__icon"></i>Img. Border syntax/Sintaxis de los bordes.
+              </figcaption>
+            </figure>
+
+            <u>Los estilos de borde son:</u> <br><br>
+            <ul class="lista-border-style">
+              <li>solid (Borde solido).</li>
+              <li>dotted (Punteado).</li>
+              <li>dashed (Punteado guiónes)</li>
+              <li>double (Doble línea)</li>
+            </ul>
+            <br>
+          </li>          
+          <!-- 8. Outline -->
+          <li><b>outline: </b>Es un <span class="high-txt">CONTORNO/BORDE</span> que se aplica al contenedor.
+            LA DIFERENCIA con la propiedad <span class="code-line">border</span> es que <span class="code-line">outline</span> <b>NO OCUPA ESPACIO</b>, no genera que las cajas ni ningún elemento se muevan, no existe en el DOM, <b>TAN SOLO SE PINTA SOBRE LA CAJA</b>. <br> Comparte los MISMOS ESTILOS que border (solid, dotted, double, etc) y tienen la MISMA SINTAXIS.
+            <br>
+            <span class="cinta">SINTAXIS: </span><br>
+
+            <figure>
+              <img
+                class="img-all img-little"
+                src="/IMAGES/outline-css.png"
+                title="Sintaxis de Outline"
+                alt="Imagen de la sintaxis de Outline"
+              />
+              <figcaption class="cite">
+                <i class="fas fa-code-branch  cite__icon"></i>Img. Outline syntax/Sintaxis de contorno.
+              </figcaption>
+            </figure>
+          </li>
+          <!-- 9. Border radius -->
+          <li><b>border-radius: </b>Define la curvatura de las esquinas del contenedor.</li>
+          <!-- 10. Text shadow -->
+          <li><b>text-shadow: </b>Genera sombra en el texto contenido en la caja. <br>
+            <span class="cinta">SINTAXIS: </span><br>
+            
+            <figure>
+              <img
+                class="img-all img-little"
+                src="/IMAGES/text-shadow-syntax-css.png"
+                title="Sintaxis de Text-shadow"
+                alt="Imagen de la sintaxis de Text-shadow"
+              />
+              <figcaption class="cite">
+                <i class="fas fa-code-branch  cite__icon"></i>Img. Text-shadow syntax/Sintaxis sombreado de texto.
+              </figcaption>
+            </figure> 
+
+          </li>
+          <!-- 11. Box shadow -->
+          <li><b>box-shadow: </b>Genera sombra en el contorno de la caja. <br>
+            <span class="cinta">SINTAXIS: </span><br>
+            
+            <figure>
+              <img
+                class="img-all img-little"
+                src="/IMAGES/box-shadow-syntax-css.png"
+                title="Sintaxis de Box-shadow"
+                alt="Imagen de la sintaxis de Box-shadow"
+              />
+              <figcaption class="cite">
+                <i class="fas fa-code-branch  cite__icon"></i>Img. Box-shadow syntax/Sintaxis sombreado de caja.
+              </figcaption>
+            </figure>
+
+          </li>
+        </ul>
+      </p>
+      
+      <hr class="line-hr" color="00c6ff">
+
+      <p>
+        Existen "dos (2) modelos de cajas" por así decirlo.
+        <ol class="lista-2-boxmodel">
+          <li><b>Caja Estándar: </b>Un contenedor estándar se le define ancho y alto (width/height), pero a partir de ahí, todas las propiedades añadidas se suman al valor total del ancho y alto del contenedor.</li>
+          <li><b>Caja Alternativa: </b>Se define el ancho y alto de la caja (width/height) y va a ser la única medida establecida, NO se verá afectada por las medidas de otras propiedades. Para que esto funcione, se debe poner <span class="code-line">box-sizing: border-box;</span> dentro de la etiqueta <span class="high-txt">HTML --></span><span class="code-line"> html { box-sizing: border-box; }</span> o definirlo para que afecte a TODOS los elementos de la página, <span class="code-line">* { box-sizing: border-box; }</span>.
+          <br>
+          Esta es la forma mas usual, ya que defines el tamaño de algún elemento y lo respeta.</li>
+        </ol>
+      </p>
+      
+      <hr class="line-hr" color="00c6ff">
+      
+      <!-- ***********************************************************
+           Subtitle Position property
+      ************************************************************ -->
+      <h3 class="subtitle">Propiedad Position / Posicionamiento de cajas: </h3>
+
+      <p>
+        Como la palabra lo indica, es la forma de POSICIONAR ELEMENTOS, la forma en que se ubican las cajas dentro de otras cajas. <br>
+        La propiedad <span class="code-line">position</span> nos habilita la edición del valor de los lados de una caja (top, left, bottom, right). <br>
+        Los principales son <b>top y left</b>, también se usan <b>right y bottom</b>  pero aveces son innecesarios ya que con solo top y left se puede posicionar un elemento, el valor que le asignemos es la cantidad de espacio que se va a mover dentro de su caja padre.  <br><br>
+        La propiedad <span class="code-line">position</span> tiene cuatro (4) formas de posicionar las cajas.
+
+        <ol class="lista-position">
+          <!-- 1. Position relative -->
+          <li><b>relative: </b>Los elementos se posicionan de acuerdo al flujo del documento, osea en el orden que se haya puesto en el HTML. <br> <span class="code-line">position: relative;</span> se desplaza la cantidad que uno establezca en el <b>top & left</b> <span class="high-txt">PERO SIEMPRE CONSERVANDO SU ESPACIO ORIGINAL, NO ES OCUPADO POR OTROS ELEMENTOS</span> y no afecta la posición de los otros, osea que el espacio que se le da al elemento desde el principio, es el mismo, su espacio original se mantiene. <br><br>
+  
+          <span class="cinta">Ejemplo</span>
+          <p>
+            Tenemos cuatro (4) cajas del mismo tamaño (100px x 100px) y diferente color, todas dentro de un contenedor padre.
+          </p>
+            
+            <div class="pos-container">
+              
+              <div class="pos-container__html-code">
+                <textarea name="html-code" id="html-code" readonly>  
+
+ &lt;div class="caja-padre"&gt;
+   &lt;div class="caja caja1"&gt;Caja 1&lt;/div&gt; 
+   &lt;div class="caja caja2"&gt;Caja 2&lt;/div&gt; 
+   &lt;div class="caja caja3"&gt;Caja 3&lt;/div&gt; 
+   &lt;div class="caja caja4"&gt;Caja 4&lt;/div&gt; 
+ &lt;/div&gt; 
+                </textarea>
+              </div>
+
+              <div class="pos-container__css-code">
+                <textarea name="css-code" id="css-code" readonly>
+  
+  .caja {
+    width: 100px;
+    height: 100px;
+  }
+  .caja1 {
+    background: yellow;
+  }
+  .caja2 {
+  background: blue;
+  position: relative;
+  top: 23px;
+  left: 20px;
+  }
+  .caja3 {
+  background: red;
+  position: relative;
+  top: 10px;
+  left: 33px;
+  }
+  .caja4 {
+    background: white;
+  }
+                </textarea>
+              </div>
+
+              <!-- Cajas RESULTADO -->
+              <div class="pos-container__cajas">
+                <div class="pos-caja pos-caja1">Caja 1</div>
+                <div class="pos-caja pos-caja2">Caja 2</div>
+                <div class="pos-caja pos-caja3">Caja 3</div>
+                <div class="pos-caja pos-caja4">Caja 4</div>
+              </div>
+
+            </div>
+
+            <p>
+              <span class="high-txt">PODEMOS NOTAR QUE:</span> <br>
+              <b>**</b> Aunque hayamos desplazado el elemento con los valores del <b>top & left,</b> con <span class="code-line"> position: relative;</span> siempre se guarda el espacio inicialmente asignado para el elemento. <br>
+              <b>**</b> La Caja 4 a pesar de ser la última agregada, se encuentra detrás de la Caja 3, pero la Caja 3 si está encima de la Caja 2, esto pasa porque le escribimos <span class="code-line"> position: relative;</span> a la Caja 3 y esta instrucción activa su <b>z-index</b>, osea el orden de posicionamiento. Si pusieramos <span class="code-line"> position: relative;</span> en la Caja 4, automáticamente va a quedar por encima de la Caja 3, ya que es el último elemento agregado y se posiciona por encima.
+            </p>
+          </li>
+
+          <!-- 2. Position absolute -->
+          <li><b>absolute: </b></li>
+          <li><b>fixed: </b></li>
+          <li><b>sticky: </b></li>
+        </ol>
+      </p>
+     
+      Después va explicación de Z-INDEX para aclarar conceptos fixed y demás.
+    </div>
+
+    <!-- ***********************************************************
+         FOOTER
+    ************************************************************ -->
+    <footer>
+      <span>
+        <i class="fab fa-css3"></i>
+        <i class="fas fa-laptop-code"></i>
+      </span>
+      <label for="">CSS Course</label>
+      <label for="">Jacs Developer &copy;</label>
+    </footer>
+  </body>
+</html>

@@ -101,8 +101,7 @@ a {
 .buscar__txt-input:hover {
   border: solid 2px var(--electronBlue);
   box-shadow: 0 2px 7px rgba(0, 0, 0, 0.1);
-  width: 330px;
-  padding: 13px;
+  width: 309px;
   opacity: 1;
 }
 
@@ -278,108 +277,108 @@ footer span i {
   margin-bottom: 23px;
 }
 
-/********* position container padre *********/
+/********* continer-source *********/
 
-.pos-container {
-  /* outline: solid 2px var(--electronBlue); */
-  box-shadow: 1px 2px 17px 7px rgba(0, 0, 0, 0.3);
+.container-source {
   margin: 30px 0;
+  padding: 9px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 9px;
-  padding: 30px 17px 17px 17px;
   border-radius: 17px;
+  box-shadow: 1px 2px 17px 7px rgba(0, 0, 0, 0.1);
+}
+
+.container-source textarea {
+  width: 100%;
+  height: 100%;
+  padding: 27px 0 0 17px;
+  font-size: 1.3em;
+  border: none;
+  color: white;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.container-source__html {
+  outline: solid 0.3px var(--electronBlue);
+  border-radius: 3px;
+  grid-column: 1;
   position: relative;
 }
 
-/********* position container HTML & CSS code *********/
-
-.pos-container__html-code {
-  /* outline: solid 2px var(--electronBlue); */
-  grid-column: 1;
-}
-.pos-container__html-code::before {
+.container-source__html::after {
   content: "HTML";
-  background: var(--electronBlue);
-  color: #fff;
-  outline: dotted 2px #fff;
   position: absolute;
-  top: 7px;
-  left: 24.7%;
-  padding: 9px;
-  border-radius: 17px;
-  grid-column: 1;
+  top: -17px;
+  right: 23px;
+  padding: 3px 7px;
+  border-radius: 7px;
+  color: white;
+  font-weight: 400;
+  background: var(--electronBlue);
 }
 
-.pos-container__css-code {
-  /* outline: solid 2px var(--electronBlue); */
+.container-source__css {
+  outline: solid 0.3px var(--electronBlue);
+  border-radius: 3px;
   grid-column: 2;
+  position: relative;
 }
-.pos-container__css-code::before {
+
+.container-source__css::after {
   content: "CSS";
-  background: var(--electronBlue);
-  color: #fff;
-  outline: dotted 2px #fff;
   position: absolute;
-  top: 7px;
-  right: 57%;
-  padding: 9px;
-  border-radius: 17px;
-  grid-column: 2;
+  top: -17px;
+  right: 23px;
+  padding: 3px 7px;
+  border-radius: 7px;
+  color: white;
+  font-weight: 400;
+  background: var(--electronBlue);
 }
 
-.pos-container__html-code textarea,
-.pos-container__css-code textarea {
-  resize: none;
-  width: 100%;
-  height: 100%;
-  font-size: 1.3em;
-  background: rgba(0, 0, 0, 0.6);
-  color: #fff;
-  outline: none;
-}
-
-/********* position container padre cajas *********/
-
-.pos-container__cajas {
-  /* outline: solid 2px var(--electronBlue); */
-  background: rgba(0, 0, 0, 0.6);
+.container-source__rtdo {
+  outline: solid 0.3px var(--electronBlue);
+  border-radius: 3px;
   grid-column: 3;
+  background: rgba(0, 0, 0, 0.37);
+  position: relative;
 }
 
-.pos-container__cajas::before {
+.container-source__rtdo::after {
   content: "RTDO";
-  background: var(--electronBlue);
-  color: #fff;
-  outline: dotted 2px #fff;
   position: absolute;
-  top: 7px;
-  right: 27px;
-  padding: 9px;
-  border-radius: 17px;
-  grid-column: 3;
+  top: -17px;
+  right: 23px;
+  padding: 3px 7px;
+  border-radius: 7px;
+  color: white;
+  font-weight: 400;
+  background: var(--electronBlue);
 }
-.pos-caja {
+
+.ej-caja {
   width: 100px;
   height: 100px;
   font-weight: 700;
   text-align: center;
+  padding-top: 37px;
 }
-.pos-caja1 {
+.ej-caja1 {
   background: yellow;
 }
-.pos-caja2 {
+.ej-caja2 {
   background: blue;
   position: relative;
   top: 23px;
   left: 20px;
 }
-.pos-caja3 {
+.ej-caja3 {
   background: red;
   position: relative;
   top: 10px;
   left: 33px;
 }
-.pos-caja4 {
+.ej-caja4 {
   background: whitesmoke;
 }
